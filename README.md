@@ -1,11 +1,11 @@
-![Python >= 3.6](https://img.shields.io/badge/python->=3.6-red.svg) [![](https://badgen.net/github/release/deedy5/duckduckgo_search)](https://github.com/deedy5/duckduckgo_search/releases) [![](https://badge.fury.io/py/duckduckgo-search.svg)](https://pypi.org/project/duckduckgo-search) 
-## Duckduckgo_search
+![Python >= 3.6](https://img.shields.io/badge/python->=3.6-red.svg) [![](https://badgen.net/github/release/deedy5/vm_ddgsearch)](https://github.com/deedy5/vm_ddgsearch/releases) [![](https://badge.fury.io/py/duckduckgo-search.svg)](https://pypi.org/project/duckduckgo-search) 
+## vm_ddgsearch
 
-Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine.
+Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine. This is a fork of https://github.com/deedy5/duckduckgo_search.
 
 ***Install***
 ```python
-pip install -U duckduckgo_search
+pip install -U vm_ddgsearch
 ```
 ### Table of Contents  
 [Duckduckgo search operators](#duckduckgo-search-operators)  
@@ -34,7 +34,7 @@ ___
 *WARNING!*: set a delay of at least **0.75** seconds between function calls.
 
 ```python
-from duckduckgo_search import ddg
+from vm_ddgsearch import ddg
 
 def ddg(keywords, region='wt-wt', safesearch='Moderate', time=None, max_results=28):
     ''' DuckDuckGo search
@@ -57,7 +57,7 @@ def ddg(keywords, region='wt-wt', safesearch='Moderate', time=None, max_results=
 ```
 ***Example 1. Text search***
 ```python
-from duckduckgo_search import ddg
+from vm_ddgsearch import ddg
 
 keywords = 'Bella Ciao'
 results = ddg(keywords, region='wt-wt', safesearch='Moderate', time='y', max_results=28)
@@ -72,7 +72,7 @@ print(results)
 ```
 ***Example 2. Searching for pdf files***
 ```python
-from duckduckgo_search import ddg
+from vm_ddgsearch import ddg
 
 keywords = 'conditioned reflex in humans filetype:pdf'
 results = ddg(keywords, region='wt-wt', safesearch='None', time=None, max_results=300)
@@ -89,7 +89,7 @@ print(results)
 ___
 ## 2. ddg_images() - image search by duckduckgo.com
 ```python
-from duckduckgo_search import ddg_images
+from vm_ddgsearch import ddg_images
 
 def ddg_images(keywords, region='wt-wt', safesearch='Moderate', time=None, size=None,
            color=None, type_image=None, layout=None, license_image=None, max_results=100):
@@ -122,7 +122,7 @@ def ddg_images(keywords, region='wt-wt', safesearch='Moderate', time=None, size=
 ```
 ***Example***
 ```python
-from duckduckgo_search import ddg_images
+from vm_ddgsearch import ddg_images
 
 keywords = 'liberty tree'
 r = ddg_images(keywords, region='wt-wt', safesearch='Off', size=None, 
@@ -140,7 +140,7 @@ print(r)
 ___
 ## 3. ddg_news() - news search by duckduckgo.com
 ```python
-from duckduckgo_search import ddg_news
+from vm_ddgsearch import ddg_news
 
 def ddg_news(keywords, region='wt-wt', safesearch='Moderate', time=None, max_results=30):
     ''' DuckDuckGo news search
@@ -164,7 +164,7 @@ def ddg_news(keywords, region='wt-wt', safesearch='Moderate', time=None, max_res
 ```
 ***Example***
 ```python
-from duckduckgo_search import ddg_news
+from vm_ddgsearch import ddg_news
 
 keywords = "russia invasion ukraine"
 r = ddg_news(keywords, region='wt-wt', safesearch='Off', time='d', max_results=100)
@@ -181,7 +181,7 @@ print(r)
 ___
 ## 4. ddg_maps() - map search by duckduckgo.com
 ```python
-from duckduckgo_search import ddg_maps
+from vm_ddgsearch import ddg_maps
 
 def ddg_maps(keywords, place=None, street=None, city=None, county=None, state=None,
              country=None, postalcode=None, latitude=None, longitude=None, radius=0):
@@ -219,7 +219,7 @@ def ddg_maps(keywords, place=None, street=None, city=None, county=None, state=No
 ```
 ***Example 1. Simple search (if place parameter is set, the other parameters are not used)***
 ```python
-from duckduckgo_search import ddg_maps
+from vm_ddgsearch import ddg_maps
 
 keywords = 'dentists'
 place = 'Los Angeles'
@@ -236,7 +236,7 @@ print(r)
 ```
 ***Example 2. Advanced search in city and country***
 ```python
-from duckduckgo_search import ddg_maps
+from vm_ddgsearch import ddg_maps
 
 keywords = 'dentists'
 city = 'Denver'
@@ -253,7 +253,7 @@ print(r)
 ```
 ***Example 3. Advanced search by address with increasing search square***
 ```python
-from duckduckgo_search import ddg_maps
+from vm_ddgsearch import ddg_maps
 
 keywords = 'dentists'
 street = 'Av. Dom Pedro Massa 639'
@@ -272,7 +272,7 @@ print(r)
 ```
 ***Example 4. Advanced search by coordinates with increasing search square***
 ```python
-from duckduckgo_search import ddg_maps
+from vm_ddgsearch import ddg_maps
 
 keywords = 'dentists'
 longitude = '-3,844749'
@@ -292,7 +292,7 @@ ___
 ## 5. ddg_translate() - translation by duckduckgo.com
 
 ```python
-from duckduckgo_search import ddg_translate
+from vm_ddgsearch import ddg_translate
 
 def ddg_translate(keywords, from_=None, to='en'):
     ''' DuckDuckGo translate
@@ -312,7 +312,7 @@ def ddg_translate(keywords, from_=None, to='en'):
 ```
 ***Example 1. Translate the string***
 ```python
-from duckduckgo_search import ddg_translate
+from vm_ddgsearch import ddg_translate
 
 keywords = "A chain is only as strong as its weakest link"
 results = ddg_translate(keywords, to='de')
@@ -325,7 +325,7 @@ print(results)
 ```
 ***Example 2. Translate the list of strings***
 ```python
-from duckduckgo_search import ddg_translate
+from vm_ddgsearch import ddg_translate
 
 keywords = ["Такие дела, брат", "You can lead a horse to water, but you can't make it drink.",
             "Ein Spatz in der Hand ist besser, als eine Taube auf dem Dach."]

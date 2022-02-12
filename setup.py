@@ -1,20 +1,20 @@
 from setuptools import setup
-from duckduckgo_search import __version__
+from vm_ddgsearch import __version__
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setup(
-    name="duckduckgo_search",
+    name="vm_ddgsearch",
     version=__version__,
-    author="deedy5",
-    author_email="",
+    author="Vishal Mohanty",
+    author_email="vishalmohanty97@gmail.com",
     description="Search for words, documents, images, news, maps and text translation using the DuckDuckGo.com search engine.",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/deedy5/duckduckgo_search",
+    url="https://github.com/vishalmohanty/vm_ddgsearch",
     license="MIT",
-    py_modules=["duckduckgo_search"],
+    py_modules=["vm_ddgsearch"],
     install_requires=["requests>=2.27.1", "lxml>=4.7.1", "brotli>=1.0.9"],
     classifiers=[
         "Development Status :: 5 - Production/Stable",
